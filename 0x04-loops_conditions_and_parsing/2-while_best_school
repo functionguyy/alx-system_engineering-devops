@@ -2,5 +2,5 @@
 NUM=0
 while [ "$NUM" -lt "10" ]; do
 	echo "Best School"
-	((NUM=NUM+1))
+	let NUM=NUM+1
 done
