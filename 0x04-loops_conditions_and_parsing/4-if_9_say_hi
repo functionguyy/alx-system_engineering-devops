@@ -4,6 +4,7 @@
 NUM=1
 while [ "$NUM" -le "10" ]; do
 	if [ "$NUM" -eq "9" ]; then
+		echo "Best School"
 		echo "Hi"
 	else
 		echo "Best School"
