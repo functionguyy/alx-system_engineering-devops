@@ -1,4 +1,3 @@
 #!/usr/bin/env ruby
-# Regular expression that will match a string that starts with h end withs n
-# and can have any single character in between
+# The regular expression must match a 10 digit phone number
 puts ARGV[0].scan(/^\d{10}/).join
