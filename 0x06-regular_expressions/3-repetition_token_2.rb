@@ -4,4 +4,4 @@
 # hbttn
 # hbtttn
 # hbttttn
-puts ARGV[0].scan(/hb{1,4}tn/).join
+puts ARGV[0].scan(/hbt{1,4}n/).join
