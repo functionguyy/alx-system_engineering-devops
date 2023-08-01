@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# Script displays listening sockets and show their PID
-$(ss -lp)
