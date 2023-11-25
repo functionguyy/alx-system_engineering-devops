@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# This script displays "Best School" 10 times, but for the 9th iteration,
+# displays "Best School" and then "Hi" on a new line
+LIMIT=10
+mystring="Best School"
+mystring2="Hi"
+n=1
+
+while (( n <= LIMIT ))
+do
+	echo "$mystring"
+	if [ "$n" -eq 9 ]
+	then
+		echo "$mystring2"
+	fi
+	(( n++ ))
+done
+		
