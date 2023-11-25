@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This scripts displays "Best School" 10 times
+LIMIT=10
+mystring="Best School"
+n=1
+
+until ((n > LIMIT))
+do
+	echo "$mystring"
+	(( n++ ))
+done
