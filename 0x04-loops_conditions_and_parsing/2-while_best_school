@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+LIMIT=10
+mystring="Best School"
+n=0
+
+while (( n < LIMIT ))
+do 
+	echo "$mystring"
+	(( n++ ))
+done
