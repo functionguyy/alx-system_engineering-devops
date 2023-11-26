@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# This script displays numbers from 1 to 20 and displays 4 and then "bad luck
+# from china" for the 4th loop iteration, displays 9 and then "bad luck from
+# japan" for the 9th iteration, displays 17 and then "bad luck from italy" for
+# the 17th iteration
+
+LIMIT=20
+china="bad luck from China"
+japan="bad luck from Japan"
+italy="bad luck from Italy"
+n=1
+
+while (( n <= LIMIT ))
+do
+	echo "$n"
+	case "$n" in
+		4) echo "$china";;
+		9) echo "$japan";;
+		17) echo "$italy";;
+	esac
+	(( n++ ))
+done
