@@ -2,7 +2,7 @@
 
 This file contains the highlights from my study of the implementation of the above concepts in bash scripting
 
-# The for loop
+## The for loop
 
 The syntax for this loop is:
 
@@ -39,7 +39,27 @@ Another syntax for this loop is:
 ```bash
 for ((expr; expr; expr)); do COMMANDS; done
 ```
+
+[see more](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_01.html)
 ## Comparison Operators
+The operators used to compare strings are different from the operators used to
+compare integers
+
 ### integer comparison
 
-- `-eq` : is equal to `if [ "$a" -eq "$b" ]
+- `-eq` : is equal to `if [ "$a" -eq "$b" ]`
+[see more](https://tldp.org/LDP/abs/html/comparison-ops.html#EQUALSIGNREF)
+
+## The while loop
+
+## Command list within Parentheses
+
+```bash
+( command1; command2; command3;... )
+```
+> A command list embedded between parenthese runs as a subshell
+
+Variables in a subshell are _not_ visible outside the block of code in the
+subshell. They are not accessible to the parent process, to the shell that
+launched the subshell. 
+
