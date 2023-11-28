@@ -4,6 +4,5 @@
 
 LOG_FILE="apache-access.log"
 
-TARGET_LOG=$(awk '{print $1,$9}'  $LOG_FILE)
 
-echo "$TARGET_LOG"
+awk '{print $1,$9}' < $LOG_FILE
