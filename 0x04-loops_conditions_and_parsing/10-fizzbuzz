@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# This script displays numbers from 1 to 100
+N=1
+LIMIT=100
+
+while (( N <= LIMIT )) # test the value of N 
+do
+	# test if number is a multiple of 3 and 5
+	if [ $((N % 3)) -eq 0 ] && [ $((N % 5)) -eq 0 ]
+	then
+		echo "FizzBuzz"
+	elif [ $((N % 3)) -eq 0 ] # test if number is a multiple of 3
+	then
+		echo "Fizz"
+	elif [ $((N % 5)) -eq 0 ] # test if N is a multiple of 5
+	then
+		echo "Buzz"
+	else
+		echo "$N"
+	fi
+	(( N++ ))
+done
