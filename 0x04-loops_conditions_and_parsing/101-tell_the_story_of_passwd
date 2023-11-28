@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# This script displays the content of the file /etc/passwd, using while
+# loop+IFS
+
+FILENAME="/etc/passwd"
+
+OIFS=$IFS
+IFS=":" # /etc/passwd uses ":" for field separator
+while read -r USR_NAME PSWD USR_ID GRP_ID ID_INFO HOME_DIR CMDSHL
+do
+	MYSTRING="The user $USR_NAME is part of the $GRP_ID gang, lives in 
+$HOME_DIR and rides $CMDSHL. ${USR_ID}'s place is protected by the passcode
+ $PSWD, more info about the user here: $ID_INFO"
+
+	# Replace newlines with spaces
+	MYSTRING="${MYSTRING//$'\n'/}"
+
+	echo "$MYSTRING"
+
+done < "$FILENAME"
+echo
+IFS=$OIFS
+
