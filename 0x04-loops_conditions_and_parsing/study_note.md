@@ -63,3 +63,14 @@ Variables in a subshell are _not_ visible outside the block of code in the
 subshell. They are not accessible to the parent process, to the shell that
 launched the subshell. 
 
+## embed linefeed within an `echoed` character string
+
+Set the string to a variable
+```bash
+mystring="This is the test string"
+```
+and then pass the variable as an argument to `echo`
+```bash
+echo $mystring
+```
+
