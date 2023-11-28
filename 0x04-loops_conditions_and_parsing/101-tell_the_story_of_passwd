@@ -18,6 +18,5 @@ $HOME_DIR and rides $CMDSHL. ${USR_ID}'s place is protected by the passcode
 	echo "$MYSTRING"
 
 done < "$FILENAME"
-echo
 IFS=$OIFS
 
