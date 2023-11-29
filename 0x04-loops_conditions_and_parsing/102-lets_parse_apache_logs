@@ -4,4 +4,4 @@
 
 LOG_FILE="apache-access.log"
 
-awk '{if ($8 ~ /\"/) print $1,$9; else print $1,$7}' < $LOG_FILE
+awk '{print $1,$9}' < $LOG_FILE
