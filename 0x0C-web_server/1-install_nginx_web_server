@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script configures Ngnix on a new Ubuntu machine
+
+# update local package index
+apt-get -y update
+
+# install Ngnix
+apt-get -y install nginx
+
+# Adjust firewall
+ufw allow 'Nginx HTTP'
+
+# default text
+echo 'Hello World!' > /var/www/html/index.html
