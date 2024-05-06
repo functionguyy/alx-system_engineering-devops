@@ -2,7 +2,7 @@
 # This script configures Ngnix on a new Ubuntu machine
 
 # update local package index
-apt-get -y update
+apt-get update
 
 # install Ngnix
 apt-get -y install nginx
