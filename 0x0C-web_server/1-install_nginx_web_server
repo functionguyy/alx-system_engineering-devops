@@ -12,3 +12,5 @@ ufw allow 'Nginx HTTP'
 
 # default text
 echo 'Hello World!' > /var/www/html/index.html
+
+/usr/bin/nginx -s reload
