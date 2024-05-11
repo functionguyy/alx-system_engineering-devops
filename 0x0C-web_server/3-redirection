@@ -14,7 +14,7 @@ ufw allow 'Nginx HTTP'
 echo 'Hello World!' > /var/www/html/index.html
 
 # modify location block in place
-sed -i '/^ *location \//c\
+sed -i 's/^ *location \//c\
     location /redirect_me {\
         return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4 \
     }' /etc/nginx/sites-available/default
