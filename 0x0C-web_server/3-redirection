@@ -13,10 +13,9 @@ ufw allow 'Nginx HTTP'
 # default text
 echo 'Hello World!' > /var/www/html/index.html
 
+r_string="server_name _;\n\n\tlocation \/redirect_me {\n\treturn 301
+https:\/\/github.com\/functionguyy"
 # modify location block in place
-sed -i 's/^ *location \//c\    
-    location \/redirect_me {\
-        return 301 https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 \
-    }' /etc/nginx/sites-available/default
+sed -i "s/^ *server_name _;/$r_string" /etc/nginx/sites-available/default
 
 service nginx restart
