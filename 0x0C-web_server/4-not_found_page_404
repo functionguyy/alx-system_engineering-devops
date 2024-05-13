@@ -24,7 +24,7 @@ sed -i "s/server_name _;/$r_string/" /etc/nginx/sites-available/default
 e_string="error_page 404 \/custom_404.html;"
 
 #modify location / block to return custom 404 error page
-sed -i "s/try_files \$uri \$uri\/ =404;/$e_string/"
+sed -i "s/try_files \$uri \$uri\/ =404;/$e_string/" /etc/nginx/sites-available/default
 
 # Restart Nginx
 service nginx restart
