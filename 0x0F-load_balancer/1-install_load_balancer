@@ -5,20 +5,23 @@
 apt-get update
 
 # install HAproxy
-apt-get -y install --no-install-recommends software-properties-common
-add-apt-repository -y ppa:vbernat/haproxy-2.8
-apt-get -y install haproxy=2.8.\*
-
+apt-get -y install haproxy
 
 
 HAPROXY_CONFIG="/etc/haproxy/haproxy.cfg"
+HAPROXY_INIT="/etc/default/haproxy"
+
+init_config="ENABLED=1"
+
+echo "$init_config" >> $HAPROXY_INIT
 
 server_config=\
 "
 frontend myfrontend
         mode http
-	bind *:80
+	bind :80
         default_backend mybackend
+
 backend mybackend
         balance roundrobin
         server 167954-web-01 54.166.61.137:80 check
