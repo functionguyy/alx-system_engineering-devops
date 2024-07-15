@@ -5,8 +5,7 @@
 apt-get update
 
 # install HAproxy
-apt-get -y install haproxy
-
+apt-get install haproxy
 
 HAPROXY_CONFIG="/etc/haproxy/haproxy.cfg"
 HAPROXY_INIT="/etc/default/haproxy"
@@ -24,8 +23,8 @@ frontend myfrontend
 
 backend mybackend
         balance roundrobin
-        server 167954-web-01 54.166.61.137:80 check
-        server 167954-web-02 54.157.184.234:80 check
+        server web-01 web-01.gilbertadikankwu.tech:80 check
+        server web-02 web-02.gilbertadikankwu.tech:80 check
 "
 echo "$server_config" >> $HAPROXY_CONFIG
 service haproxy restart
