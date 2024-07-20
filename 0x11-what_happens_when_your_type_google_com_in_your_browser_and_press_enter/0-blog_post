@@ -51,7 +51,9 @@ not something we humans find easy to do. Hence the DNS was created to hold the
 record of the human-readable names associated with each IP address connected to
 the internet. This human-readable name is called `hostname`
 
-For this article, the `hostname` we interested in is `www.google.com`
+For this article, the `hostname` we interested in is `google.com`
+
+To put it simply, a hostname is the string representation of an IP address.
 
 ## Clients and servers
 Computers connected to the internet are called client and servers. We already
@@ -88,4 +90,11 @@ character strings.
 
 The procedure for encrypting information and then exchanging it is called
 Hypertext Transfer Protocol Secure (HTTPS)
+
+When you request a HTTPS connection to a Website, the Webserver will initially 
+send its SSL certificate to your browser. This certificate contains the public key
+needed to begin the secure session. Based on this initial exchange, your browser and
+the webserver then initiate the 'SSL handshake'. The SSL handshake involves generation
+of shared secrets to establish a uniquely secure connection between yourself and the webserver
+hosting the website you're requesting. 
 
