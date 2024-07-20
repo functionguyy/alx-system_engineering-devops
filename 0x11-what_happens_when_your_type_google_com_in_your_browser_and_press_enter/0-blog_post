@@ -1,0 +1,91 @@
+# What happens when you type https://www.google.com in your browser and press
+# Enter
+
+The internet (or internet) is the global system of interconnected computer
+networks that uses the Internet protocol suite (TCP/IP) to communicate between
+networks and devices. It is a network of networks.
+
+The two principal namespaces on the internet, The Internet Protocol(IP) address
+space and the Domain Name System(DNS) space, work together to make it easy for
+we humans to use the internet efficiently. 
+
+TCP/IP is a suite of protocols used by devices to communicate over the
+internet. It is named after two of it's original
+protocols - the Transmission Control Protocol (TCP) and the Internet
+Protocol (IP)
+
+
+TCP is used to send bits of data known as packets.
+TCP build on top of the IP protocol. In other words, a packet is sent to an IP
+address. 
+
+## What is an IP address?
+
+Every machine on the internet has a unique number assigned to it, called an IP
+address. Without a unique IP address on your machine, you will not be able to
+communicate with other devices, users, and computers on the internet. You can
+look at your IP address as if it were a telephone number, each one being unique
+and used to identify a way to reach you and only you.
+
+An IP address always consists of 4 numbers separated by periods, with numbers
+having a possible range of 0 through 255. An example of how an IP address
+appears is: 127.0.0.1
+
+## What is DNS?
+The domain name system, or DNS, is a global system responsible for mapping
+human-readable hostnames to their corresponding Internet Protocol (IP)
+addresses. For example, if you want to access a website using a domain name
+like example.com, that domain name must point to a valid IP address.
+
+## Servers vs Webservers
+Internet resources are stored/hosted on special computers known as Servers. 
+These Servers are computers that store webpages, sites, or apps. Webservers run
+applications which transfers copies of the webpages stored on a Server to other
+computers requesting for it.
+
+Recall that every machine connected to a network has a unique IP address.
+Same goes for Server computers too connected the internet. That means to locate
+a website, you have to know the IP address of the Server computer on which the 
+files for the website is stored. But remembering numbers separated by dots is 
+not something we humans find easy to do. Hence the DNS was created to hold the 
+record of the human-readable names associated with each IP address connected to
+the internet. This human-readable name is called `hostname`
+
+For this article, the `hostname` we interested in is `www.google.com`
+
+## Clients and servers
+Computers connected to the internet are called client and servers. We already
+talked about what is a server. Clients are the typical web user's
+internet-connected devices (for example, your computer connected to your Wi-FI,
+or your phone connected to your mobile network) and web-accessing software
+available on those devices (usually a web browser like MS Edge or Chrome). This
+two sets of computers are able communicate with eachother using HyperText
+Transfer Protocol (HTTP) (Think of it like how two people who understand
+English will cnverse with English Language).
+
+
+## HTTP
+In the beginning, network administrators had to figure out how to share the
+information thay put out on the internet.
+
+They agreed on a procedure for exchanging information and called it Hypertext
+Transfer Protocol (HTTP)
+
+HTTP is an application protocol that defines a language for clients and servers
+to speak to each other.
+
+### HTTP vs HTTPS
+All communication sent over regular HTTP connections are in _plain text_ and
+can be read by any hacker that manages to break into the connection between
+your browser and the Webserver.
+
+Once everyone knew how to exchange information , intercepting on the internet
+was not difficult. So knowledgeable administrators agreed upon a procedure to
+protect the information exchanged on the internet. The protection relies on SSL
+certificate to encrypt the online data. Encryption means that the sender and
+recipient agree upon a "code" and translate their documents into random-looking
+character strings.
+
+The procedure for encrypting information and then exchanging it is called
+Hypertext Transfer Protocol Secure (HTTPS)
+
